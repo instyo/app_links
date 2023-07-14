@@ -90,11 +90,11 @@ public final class SwiftAppLinksPlugin: NSObject, FlutterPlugin, FlutterStreamHa
     _eventSink(latestLink)
   }
 
-private func clearLatestLink() {
-  latestLink = nil
+  private func clearLatestLink() {
+    latestLink = nil
 
-  if let eventSink = eventSink {
-    eventSink(nil)
+    if let eventSink = eventSink {
+      eventSink(nil)
+    }
   }
-}
 }
