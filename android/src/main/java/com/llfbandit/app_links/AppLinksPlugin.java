@@ -82,6 +82,9 @@ public class AppLinksPlugin implements
       result.success(latestLink);
     } else if (call.method.equals("getInitialAppLink")) {
       result.success(initialLink);
+    } else if (call.method.equals("clearLatestAppLink")) {
+      clearLatestLink();
+      result.success(null);
     } else {
       result.notImplemented();
     }
@@ -181,6 +184,10 @@ public class AppLinksPlugin implements
     }
 
     return false;
+  }
+
+  private void clearLatestLink() {
+    latestLink = null;
   }
 
   ///
