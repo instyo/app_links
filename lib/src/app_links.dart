@@ -27,6 +27,11 @@ class AppLinks extends AppLinksPlatform {
   }
 
   @override
+  Future<String?> clearLatestAppLink() async {
+    return AppLinksPlatform.instance.clearLatestAppLink();
+  }
+
+  @override
   Stream<String> get stringLinkStream {
     return AppLinksPlatform.instance.stringLinkStream;
   }
