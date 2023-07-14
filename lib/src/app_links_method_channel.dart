@@ -46,9 +46,8 @@ class AppLinksMethodChannel extends AppLinksPlatform {
   }
 
   @override
-  Future<void?> clearLatestAppLink() async {
-    final link = await _method.invokeMethod<String?>(_clearLatestAppLinkMethod);
-    return link != null && link.isNotEmpty ? link : null;
+  Future<void> clearLatestAppLink() async {
+    await _method.invokeMethod<String?>(_clearLatestAppLinkMethod);
   }
 
   @override
