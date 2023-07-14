@@ -27,7 +27,7 @@ class AppLinks extends AppLinksPlatform {
   }
 
   @override
-  Future<String?> clearLatestAppLink() async {
+  Future<void> clearLatestAppLink() async {
     return AppLinksPlatform.instance.clearLatestAppLink();
   }
 
