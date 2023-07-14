@@ -63,6 +63,13 @@ abstract class AppLinksPlatform extends PlatformInterface {
     );
   }
 
+  /// Clear the latest link
+  Future<void> clearLatestAppLink() {
+    throw UnimplementedError(
+      'clearLatestAppLink not implemented on the current platform.',
+    );
+  }
+
   /// Stream for receiving incoming URI events as [String].
   ///
   /// The [Stream] emits opened URI as [String]s.
